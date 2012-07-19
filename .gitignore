@@ -1,0 +1,8 @@
+.project
+.settings
+.classpath
+target
+META-INF
+bin
+.bak
+logs

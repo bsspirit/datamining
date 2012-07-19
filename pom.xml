@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.conan.dm</groupId>
+  <artifactId>DataMining</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>DataMining</name>
+  <url>http://data.fans.me</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <organization>
+    <name>DataMining</name>
+    <url>http://data.fans.me</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>Conan</id>
+      <name>Conan Zhang</name>
+      <email>bsspirit@gmail.com</email>
+      <url>http://data.fans.me</url>
+      <organization>DataMining</organization>
+      <organizationUrl>http://data.fans.me</organizationUrl>
+      <roles>
+        <role>Architect</role>
+        <role>Developer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <repositories>
+    <repository>
+      <id>alibabatech</id>
+      <url>http://code.alibabatech.com/mvn/releases/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+  <modules>
+  	<module>lijichong</module>
+  </modules>
+</project>
