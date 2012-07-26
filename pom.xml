@@ -46,5 +46,6 @@
   </repositories>
   <modules>
   	<module>lijichong</module>
+  	<module>competition</module>
   </modules>
 </project>
