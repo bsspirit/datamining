@@ -10,5 +10,5 @@
 <?php }?>
 
 <div class="view">
-	<a href="#">提交程序</a>
+	<a href="/submit/<?php echo $model->id?>" target="_blank">提交程序</a>
 </div>

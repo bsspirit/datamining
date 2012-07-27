@@ -3,7 +3,9 @@
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'quiz-form',
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation'=>true,
+	'stateful'=>true,
+	'htmlOptions'=>array('enctype' => 'multipart/form-data')
 )); ?>
 	<?php echo $form->errorSummary($model); ?>
 	
@@ -22,7 +24,7 @@
 		<?php 
 			$this->widget('zii.widgets.jui.CJuiDatePicker', array(  
 	        'model'=>$model,  
-	        'attribute'=>'end_data',  
+	        'attribute'=>'end_date',  
 	        'options' => array(  
 	            'dateFormat'=>'yy-mm-dd',  
 	        ),  
@@ -36,12 +38,12 @@
 	</div>
 	
 	<div class="row">
-		上传训练集数据:<br/>
+		上传训练集数据：(csv格式文件)<br/>
 		<input type="file" name="train"/>
 	</div>
 	
 	<div class="row">
-		上传测试集数据：<br/>
+		上传测试集数据：(csv格式文件)<br/>
 		<input type="file" name="test"/>
 	</div>
 	

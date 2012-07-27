@@ -18,11 +18,15 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		'create_date',
 		array(
 			'name'=>'结束时间',
-			'value'=>'empty($data->end_data)?"无期限":$data->end_data',
+			'value'=>'empty($data->end_date)?"无期限":$data->end_date',
 		),
 		array(
             'name'=>'发布者',
-            'value'=>'$data->user["name"]',
+            'value'=>'$data->name',
         ),
 	),
-)); ?>
+));
+
+
+?>
+

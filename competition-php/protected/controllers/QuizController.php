@@ -14,7 +14,7 @@ class QuizController extends Controller
 	public function filters()
 	{
 		return array(
-			'accessControl', // perform access control for CRUD operations
+				'accessControl', // perform access control for CRUD operations
 		);
 	}
 
@@ -26,33 +26,40 @@ class QuizController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','download'),
-				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
+				array('allow',  // allow all users to perform 'index' and 'view' actions
+						'actions'=>array('index','status','view'),
+						'users'=>array('*'),
+				),
+				array('allow', // allow authenticated user to perform 'create' and 'update' actions
+						'actions'=>array('create','update','download'),
+						'users'=>array('@'),
+				),
+				array('allow', // allow admin user to perform 'admin' and 'delete' actions
+						'actions'=>array('admin','delete'),
+						'users'=>array('admin'),
+				),
+				array('deny',  // deny all users
+						'users'=>array('*'),
+				),
 		);
 	}
-	
-	
+
+
 	public function actionIndex(){
-		$dataProvider=new CActiveDataProvider('Quiz');
+		$dataProvider=new CActiveDataProvider('VQuiz');
 		$this->render('index',array(
-				'dataProvider'=>$dataProvider,
+			'dataProvider'=>$dataProvider,
 		));
 	}
 	
-	
+	public function actionStatus(){
+		$dataProvider=new CActiveDataProvider('VQuizStatus');
+		$this->render('status',array(
+				'dataProvider'=>$dataProvider,
+		));
+	}
+
+
 
 	/**
 	 * Displays a particular model.
@@ -61,17 +68,13 @@ class QuizController extends Controller
 	public function actionView($id)
 	{
 		$quizData = QuizService::getQuizTrainSet($id);
-		
+
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-			'train'=>$quizData,
+				'model'=>$this->loadModel($id),
+				'train'=>$quizData,
 		));
 	}
-	
-	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
+
 	public function actionCreate()
 	{
 		$model=new Quiz;
@@ -84,9 +87,36 @@ class QuizController extends Controller
 			$model->attributes=$_POST['Quiz'];
 			if(isset($_POST['content']))
 				$model->content=$_POST['content'];
-			
-			if($model->save())
+				
+			if($model->save()){
+				if(isset($_FILES['train'])){
+					$data=$_FILES['train'];
+					$dir=QuizService::$PATH_LOCAL_DATA.$model->id."/";
+					FileService::upload($data['tmp_name'],$dir,QuizService::$FILE_TRAIN);
+					
+					$quizData=new QuizData;
+					$quizData->qid=$model->id;
+					$quizData->type=QuizService::$TYPE_TRAIN;
+					$quizData->local=$dir.QuizService::$FILE_TRAIN;
+					$quizData->file=QuizService::$PATH_REMOTE_DATA.$model->id."/".QuizService::$FILE_TRAIN;
+					$quizData->save();
+				}
+
+				if(isset($_FILES['test'])){
+					$data=$_FILES['test'];
+					$dir=QuizService::$PATH_LOCAL_DATA.$model->id."/";
+					FileService::upload($data['tmp_name'],$dir,QuizService::$FILE_TEST);
+					
+					$quizData=new QuizData;
+					$quizData->qid=$model->id;
+					$quizData->type=QuizService::$TYPE_TEST;
+					$quizData->local=$dir.QuizService::$FILE_TEST;
+					$quizData->file=QuizService::$PATH_REMOTE_DATA.$model->id."/".QuizService::$FILE_TEST;
+					$quizData->save();
+				}
+
 				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
 
 		$this->render('create',array(
@@ -114,7 +144,7 @@ class QuizController extends Controller
 		}
 
 		$this->render('update',array(
-			'model'=>$model,
+				'model'=>$model,
 		));
 	}
 
@@ -149,7 +179,7 @@ class QuizController extends Controller
 			$model->attributes=$_GET['Quiz'];
 
 		$this->render('admin',array(
-			'model'=>$model,
+				'model'=>$model,
 		));
 	}
 
