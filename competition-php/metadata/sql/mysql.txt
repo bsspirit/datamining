@@ -1,0 +1,4 @@
+create databse competition;
+
+grant all on competition.* to comp@'%' identified by 'comp';
+grant all on competition.* to comp@localhost identified by 'comp';
