@@ -7,7 +7,7 @@
  * @property integer $id
  * @property integer $qid
  * @property integer $type
- * @property string $file
+ * @property string $data
  * @property string $create_date
  */
 class QuizData extends CActiveRecord
@@ -38,13 +38,12 @@ class QuizData extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('qid, type, local, file', 'required'),
+			array('qid, type', 'required'),
 			array('qid, type', 'numerical', 'integerOnly'=>true),
-			array('file,local', 'length', 'max'=>512),
-			array('create_date', 'safe'),
+			array('data, create_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, qid, type, local, file, create_date', 'safe', 'on'=>'search'),
+			array('id, qid, type, data, create_date', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,8 +67,7 @@ class QuizData extends CActiveRecord
 			'id' => 'ID',
 			'qid' => 'Qid',
 			'type' => 'Type',
-			'file' => 'File',
-			'local' =>'Local',
+			'data' => 'Data',
 			'create_date' => 'Create Date',
 		);
 	}
@@ -80,13 +78,15 @@ class QuizData extends CActiveRecord
 	 */
 	public function search()
 	{
+		// Warning: Please modify the following code to remove attributes that
+		// should not be searched.
+
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('qid',$this->qid);
 		$criteria->compare('type',$this->type);
-		$criteria->compare('file',$this->file,true);
-		$criteria->compare('local',$this->local,true);
+		$criteria->compare('data',$this->data,true);
 		$criteria->compare('create_date',$this->create_date,true);
 
 		return new CActiveDataProvider($this, array(

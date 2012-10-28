@@ -13,6 +13,7 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/my.css" />
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
@@ -26,16 +27,7 @@
 	</div><!-- header -->
 
 	<div id="mainmenu">
-		<ul id="yw2">
-			<li><a href="/quiz">竞赛列表</a></li>
-			<li><a href="/quiz/status">竞赛状态</a></li>
-			<li><a href="/submit">我的程序</a></li>
-			<?php if(Yii::app()->user->isGuest){?>
-			<li><a href="/site/login">Login</a></li>
-			<?php } else {?>
-			<li><a href="/site/logout">Logout(<?php echo Yii::app()->user->name?>)</a></li>
-			<?php }?>
-		</ul>
+		<?php include_once("nav.php");?>
 	</div>
 	<?php echo $content; ?>
 	<div class="clear"></div>

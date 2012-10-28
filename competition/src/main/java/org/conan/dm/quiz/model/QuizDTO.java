@@ -2,7 +2,6 @@
 package org.conan.dm.quiz.model;
 
 import java.sql.Timestamp;
-import java.sql.Timestamp;
 import org.conan.base.BaseObject;
 
 /**

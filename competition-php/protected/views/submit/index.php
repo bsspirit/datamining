@@ -21,11 +21,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		'lang',
 		array(
 			'name'=>'内存',
-			'value'=>'512m',
+			'value'=>'',
 		),
 		array(
 			'name'=>'运行时间',
-			'value'=>'12500ms',
+			'value'=>'',
 		),
 		'code_length',
 		'create_date',

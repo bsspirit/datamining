@@ -7,9 +7,10 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'竞赛平台',
+	'name'=>'R语言数据建模竞赛平台',
 	'language'=>'zh_cn',
 	'preload'=>array('log'),
+	'defaultController'=>'quiz',
 	'import'=>array(
 		'application.models.*',
 		'application.services.*',
@@ -35,6 +36,15 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
+			
+		'authManager'=>array(
+				'class'=>'CDbAuthManager',
+				'connectionID'=>'db',
+				'defaultRoles'=>array('guest'),//默认角色
+				'itemTable' => 'authitem',//认证项表名称
+				'itemChildTable' => 'authitemchild',//认证项父子关系
+				'assignmentTable' => 'authassignment',//认证项赋权关系
+		),
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=competition',
 			'emulatePrepare' => true,
@@ -58,9 +68,7 @@ return array(
 			),
 		),
 	),
-
-	// application-level parameters that can be accessed
-	// using Yii::app()->params['paramName']
+		
 	'params'=>array(
 		'adminEmail'=>'bsspirit@gmail.com',
 	),

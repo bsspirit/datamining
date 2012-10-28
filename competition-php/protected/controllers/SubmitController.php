@@ -7,7 +7,7 @@ class SubmitController extends Controller
 	{
 		$model=new QuizSubmit;
 		$model->qid=$id;
-		$model->uid=3;
+		$model->player_id=3;
 		
 		$this->performAjaxValidation($model);
 		if(isset($_POST['QuizSubmit']))
@@ -24,10 +24,10 @@ class SubmitController extends Controller
 	}
 
 	public function actionIndex(){
-		$uid=3;
+		$player_id=3;
 		$dataProvider=new CActiveDataProvider('VQuizStatus',array(
              	'criteria' => array(
-                	'condition' => 'uid='.$uid
+                	'condition' => 'player_id='.$player_id
              	),
 		));
 		

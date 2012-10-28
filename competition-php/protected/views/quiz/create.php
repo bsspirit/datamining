@@ -20,7 +20,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'end_data'); ?>
+		结束日期：
 		<?php 
 			$this->widget('zii.widgets.jui.CJuiDatePicker', array(  
 	        'model'=>$model,  
@@ -29,7 +29,6 @@
 	            'dateFormat'=>'yy-mm-dd',  
 	        ),  
 	        'htmlOptions'=>array(  
-	            'readonly'=>'readonly',  
 	            'style'=>'width:130px;',  
 	        )  
 	    	));
@@ -38,16 +37,21 @@
 	</div>
 	
 	<div class="row">
-		上传训练集数据：(csv格式文件)<br/>
-		<input type="file" name="train"/>
+		训练集数据：(以,分隔)<br/>
+		<textarea name="train" rows="10" class="w600"></textarea>
 	</div>
 	
 	<div class="row">
-		上传测试集数据：(csv格式文件)<br/>
-		<input type="file" name="test"/>
+		测试集数据：(以,分隔)<br/>
+		<textarea name="test" rows="10" class="w600"></textarea>
 	</div>
 	
-	<input type="hidden" name="uid" value="2"/>
+	<div class="row">
+		结果集数据：(以,分隔)<br/>
+		<textarea name="result" rows="10" class="w600"></textarea>
+	</div>
+	
+	<input type="hidden" name="owner_id" value="2"/>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('创建'); ?>

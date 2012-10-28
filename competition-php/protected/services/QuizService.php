@@ -6,6 +6,7 @@ class QuizService{
 
 	public static $TYPE_TRAIN=0;
 	public static $TYPE_TEST=1;
+	public static $TYPE_RESULT=2;
 
 	public static $FILE_TRAIN="train.csv";
 	public static $FILE_TEST="test.csv";
@@ -14,7 +15,7 @@ class QuizService{
 	 * 得到TrainSet
 	 */
 	public static function getQuizTrainSet($id){
-		$sql = " SELECT id,qid,type,file";
+		$sql = " SELECT id,qid,type,data";
 		$sql .= " FROM t_quiz_data";
 		$sql .= " WHERE type=0 AND qid=".$id;
 
@@ -28,11 +29,14 @@ class QuizService{
 	/**
 	 * 题目列表，通过DB视图解决
 	 */
-	public static function getQuizList($limit=0,$offset=0){
+	public static function getQuizList($limit=0,$offset=0,$uid=null){
 		$sql = " SELECT q.id,q.title,q.create_date,q.end_date,q.uid,u.name,if(sum(s.result),sum(s.result),0) as correct,count(s.id) as count";
 		$sql .= " FROM t_quiz q";
 		$sql .= " LEFT JOIN t_user u ON q.uid=u.id";
 		$sql .= " LEFT JOIN t_quiz_submit s ON s.qid=q.id";
+		if(!empty($uid)){
+			$sql .= " WHERE q.uid=".$uid;
+		}
 		$sql .= " ORDER BY q.id ASC";
 
 		$conn=Yii::app()->db;
@@ -58,6 +62,21 @@ class QuizService{
 		$command = $conn->createCommand($sql);
 		$rows=$command->queryAll();
 
+		return $rows;
+	}
+	
+	public static function getSourceSelf($uid,$qid){
+		$sql = " SELECT s.id,s.qid,q.title,s.lang,s.code,s.create_date,s.player_id,s.status,s.result";
+		$sql .=" FROM t_quiz_submit s,t_quiz q";
+		$sql .=" WHERE";
+		$sql .=" s.player_id=".$uid;
+		$sql .=" AND q.id=".$qid;
+		$sql .=" AND s.qid=q.id";
+		$sql .=" ORDER BY s.id DESC";
+		
+		$conn=Yii::app()->db;
+		$command = $conn->createCommand($sql);
+		$rows=$command->queryAll();
 		return $rows;
 	}
 }

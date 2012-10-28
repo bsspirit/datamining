@@ -9,7 +9,7 @@
  * @property string $lang
  * @property string $code
  * @property string $create_date
- * @property integer $uid
+ * @property integer $player_id
  * @property integer $status
  * @property integer $result
  */
@@ -41,13 +41,13 @@ class QuizSubmit extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('qid, code, uid, status, result', 'required'),
-			array('qid, uid, status, result', 'numerical', 'integerOnly'=>true),
+			array('qid, code, player_id', 'required'),
+			array('qid, player_id, status, result', 'numerical', 'integerOnly'=>true),
 			array('lang', 'length', 'max'=>16),
 			array('create_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, qid, lang, code, create_date, uid, status, result', 'safe', 'on'=>'search'),
+			array('id, qid, lang, code, create_date, player_id, status, result', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -73,7 +73,7 @@ class QuizSubmit extends CActiveRecord
 			'lang' => 'Lang',
 			'code' => 'Code',
 			'create_date' => 'Create Date',
-			'uid' => 'Uid',
+			'player_id' => 'Player',
 			'status' => 'Status',
 			'result' => 'Result',
 		);
@@ -95,7 +95,7 @@ class QuizSubmit extends CActiveRecord
 		$criteria->compare('lang',$this->lang,true);
 		$criteria->compare('code',$this->code,true);
 		$criteria->compare('create_date',$this->create_date,true);
-		$criteria->compare('uid',$this->uid);
+		$criteria->compare('player_id',$this->player_id);
 		$criteria->compare('status',$this->status);
 		$criteria->compare('result',$this->result);
 

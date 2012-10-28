@@ -8,8 +8,8 @@
  * @property string $title
  * @property string $create_date
  * @property string $end_date
- * @property integer $uid
- * @property string $name
+ * @property integer $owner_id
+ * @property string $owner_name
  * @property string $correct
  * @property string $count
  */
@@ -41,16 +41,16 @@ class VQuiz extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, uid', 'required'),
-			array('id, uid', 'numerical', 'integerOnly'=>true),
+			array('title, owner_id', 'required'),
+			array('id, owner_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>16),
-			array('name', 'length', 'max'=>128),
+			array('owner_name', 'length', 'max'=>128),
 			array('correct', 'length', 'max'=>32),
 			array('count', 'length', 'max'=>21),
 			array('create_date, end_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, create_date, end_date, uid, name, correct, count', 'safe', 'on'=>'search'),
+			array('id, title, create_date, end_date, owner_id, owner_name, correct, count', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,8 +75,8 @@ class VQuiz extends CActiveRecord
 			'title' => 'Title',
 			'create_date' => 'Create Date',
 			'end_date' => 'End Date',
-			'uid' => 'Uid',
-			'name' => 'Name',
+			'owner_id' => 'Owner',
+			'owner_name' => 'Owner Name',
 			'correct' => 'Correct',
 			'count' => 'Count',
 		);
@@ -97,8 +97,8 @@ class VQuiz extends CActiveRecord
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('create_date',$this->create_date,true);
 		$criteria->compare('end_date',$this->end_date,true);
-		$criteria->compare('uid',$this->uid);
-		$criteria->compare('name',$this->name,true);
+		$criteria->compare('owner_id',$this->owner_id);
+		$criteria->compare('owner_name',$this->owner_name,true);
 		$criteria->compare('correct',$this->correct,true);
 		$criteria->compare('count',$this->count,true);
 

@@ -11,8 +11,8 @@
  * @property string $lang
  * @property integer $status
  * @property integer $result
- * @property integer $uid
- * @property string $name
+ * @property integer $player_id
+ * @property string $player_name
  * @property string $code_length
  */
 class VQuizStatus extends CActiveRecord
@@ -43,15 +43,15 @@ class VQuizStatus extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('qid, uid', 'required'),
-			array('id, qid, status, result, uid', 'numerical', 'integerOnly'=>true),
+			array('qid, player_id', 'required'),
+			array('id, qid, status, result, player_id', 'numerical', 'integerOnly'=>true),
 			array('title, lang', 'length', 'max'=>16),
-			array('name', 'length', 'max'=>128),
+			array('player_name', 'length', 'max'=>128),
 			array('code_length', 'length', 'max'=>10),
 			array('create_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, qid, title, create_date, lang, status, result, uid, name, code_length', 'safe', 'on'=>'search'),
+			array('id, qid, title, create_date, lang, status, result, player_id, player_name, code_length', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -72,16 +72,16 @@ class VQuizStatus extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => '运行ID',
-			'qid' => '题目ID',
-			'title' => '题目标题',
-			'create_date' => '创建时间',
-			'lang' => '语言',
-			'status' => '运行状态',
-			'result' => '运行结果',
-			'uid' => '参赛者ID',
-			'name' => '参赛者',
-			'code_length' => '代码长度',
+			'id' => 'ID',
+			'qid' => 'Qid',
+			'title' => 'Title',
+			'create_date' => 'Create Date',
+			'lang' => 'Lang',
+			'status' => 'Status',
+			'result' => 'Result',
+			'player_id' => 'Player',
+			'player_name' => 'Player Name',
+			'code_length' => 'Code Length',
 		);
 	}
 
@@ -103,8 +103,8 @@ class VQuizStatus extends CActiveRecord
 		$criteria->compare('lang',$this->lang,true);
 		$criteria->compare('status',$this->status);
 		$criteria->compare('result',$this->result);
-		$criteria->compare('uid',$this->uid);
-		$criteria->compare('name',$this->name,true);
+		$criteria->compare('player_id',$this->player_id);
+		$criteria->compare('player_name',$this->player_name,true);
 		$criteria->compare('code_length',$this->code_length,true);
 
 		return new CActiveDataProvider($this, array(

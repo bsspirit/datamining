@@ -22,7 +22,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		),
 		array(
             'name'=>'发布者',
-            'value'=>'$data->name',
+            'value'=>'$data->owner_name',
         ),
 	),
 ));
