@@ -4,7 +4,7 @@
 <!--
     This is QuizSubmit sql
     @author Conan Zhang
-    @date 2012-07-27
+    @date 2012-10-29
 -->
 <mapper namespace="org.conan.dm.quiz.dao.QuizSubmitDAO">
 
@@ -13,9 +13,10 @@
         <result property="lang" column="lang" javaType="java.lang.String"/>
         <result property="code" column="code" javaType="java.lang.String"/>
         <result property="create_date" column="create_date" javaType="java.sql.Timestamp"/>
-        <result property="uid" column="uid" javaType="java.lang.Integer"/>
-        <result property="status" column="status" javaType="java.lang.Integer"/>
-        <result property="result" column="result" javaType="java.lang.Integer"/>
+        <result property="player_id" column="player_id" javaType="java.lang.Integer"/>
+        <result property="status" column="status" javaType="java.lang.String"/>
+        <result property="result" column="result" javaType="java.lang.String"/>
+        <result property="description" column="description" javaType="java.lang.String"/>
         <result property="qid" column="qid" javaType="java.lang.Integer"/>
     </resultMap>
 
@@ -25,9 +26,10 @@
             lang,
             code,
             create_date,
-            uid,
+            player_id,
             status,
             result,
+            description,
             qid
     </sql>
 
@@ -35,9 +37,10 @@
         <if test="lang!=null">lang = #{lang} and</if>
         <if test="code!=null">code = #{code} and</if>
         <if test="create_date!=null">create_date = #{create_date} and</if>
-        <if test="uid!=null">uid = #{uid} and</if>
+        <if test="player_id!=null">player_id = #{player_id} and</if>
         <if test="status!=null">status = #{status} and</if>
         <if test="result!=null">result = #{result} and</if>
+        <if test="description!=null">description = #{description} and</if>
         <if test="qid!=null">qid = #{qid} and</if>
         1=1
     </sql>
@@ -47,17 +50,19 @@
             <if test="lang!=null ">lang,</if>
             code,
             <if test="create_date!=null ">create_date,</if>
-            uid,
+            player_id,
             <if test="status!=null ">status,</if>
             <if test="result!=null ">result,</if>
+            <if test="description!=null ">description,</if>
             qid
         ) VALUES (
             <if test="lang!=null">#{lang},</if>
             #{code},
             <if test="create_date!=null">#{create_date},</if>
-            #{uid},
+            #{player_id},
             <if test="status!=null">#{status},</if>
             <if test="result!=null">#{result},</if>
+            <if test="description!=null">#{description},</if>
             #{qid}
         )
     </insert>
@@ -80,9 +85,10 @@
             <if test="lang!=null">lang = #{lang},</if>
             <if test="code!=null">code = #{code},</if>
             <if test="create_date!=null">create_date = #{create_date},</if>
-            <if test="uid!=null">uid = #{uid},</if>
+            <if test="player_id!=null">player_id = #{player_id},</if>
             <if test="status!=null">status = #{status},</if>
             <if test="result!=null">result = #{result},</if>
+            <if test="description!=null">description = #{description},</if>
             <if test="qid!=null">qid = #{qid},</if>
             id = #{id}
         WHERE

@@ -6,9 +6,10 @@
  * The followings are the available columns in table 't_user':
  * @property integer $id
  * @property string $name
- * @property string $passwrod
- * @property integer $type
+ * @property string $password
+ * @property string $email
  * @property string $create_date
+ * @property string $title
  */
 class User extends CActiveRecord
 {
@@ -38,13 +39,14 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, passwrod', 'required'),
-			array('type', 'numerical', 'integerOnly'=>true),
-			array('name, passwrod', 'length', 'max'=>128),
+			array('name, password', 'required'),
+			array('name, title', 'length', 'max'=>16),
+			array('password', 'length', 'max'=>64),
+			array('email', 'length', 'max'=>128),
 			array('create_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, passwrod, type, create_date', 'safe', 'on'=>'search'),
+			array('id, name, password, email, create_date, title', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,9 +69,10 @@ class User extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'name' => 'Name',
-			'passwrod' => 'Passwrod',
-			'type' => 'Type',
+			'password' => 'Password',
+			'email' => 'Email',
 			'create_date' => 'Create Date',
+			'title' => 'Title',
 		);
 	}
 
@@ -86,9 +89,10 @@ class User extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
-		$criteria->compare('passwrod',$this->passwrod,true);
-		$criteria->compare('type',$this->type);
+		$criteria->compare('password',$this->password,true);
+		$criteria->compare('email',$this->email,true);
 		$criteria->compare('create_date',$this->create_date,true);
+		$criteria->compare('title',$this->title,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

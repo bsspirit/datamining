@@ -1,0 +1,4 @@
+API调用接口
+
+/quiz/{uid}/{pid}
+http://api.freemined.com/api/quiz/3/17

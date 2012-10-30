@@ -2,7 +2,7 @@
 
 class QuizController extends Controller
 {
-	public $layout='//layouts/column2';
+	public $layout='//layouts/column1';
 	
 	public function filters() {
 		return array(
@@ -40,7 +40,19 @@ class QuizController extends Controller
 
 	//所有人===============================================================
 	public function actionIndex(){
-		$dataProvider=new CActiveDataProvider('VQuiz');
+		//查类别
+		
+		if(isset($_GET['category']))
+			$condition.= ' category=' . $_GET['category'];
+		
+		$dataProvider=new CActiveDataProvider('VQuiz',array(
+				'criteria' => array(
+						'condition' => $condition,
+				),
+				'pagination'=>array(
+						'pageSize'=>50,
+				),
+		));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -56,7 +68,19 @@ class QuizController extends Controller
 	
 	//登陆用户===============================================================
 	public function actionStatus(){
-		$dataProvider=new CActiveDataProvider('VQuizStatus');
+		//查类别
+		if(isset($_GET['category']))
+			$condition.= ' category=' . $_GET['category'];
+		
+		$dataProvider=new CActiveDataProvider('VQuizStatus',array(
+				'criteria' => array(
+						'condition' => $condition,
+				),
+				'pagination'=>array(
+						'pageSize'=>50,
+				),
+		));
+		
 		$this->render('status',array(
 				'dataProvider'=>$dataProvider,
 		));
@@ -68,9 +92,16 @@ class QuizController extends Controller
 
 	//player===============================================================
 	public function actionPlayer(){
+		
+		//查类别
+		$condition='player_id='.Yii::app()->user->id;
+		if(isset($_GET['category']))
+			$condition.= ' AND category=' . $_GET['category'];
+		
+		
 		$dataProvider=new CActiveDataProvider('VQuizStatus',array(
 				'criteria' => array(
-						'condition' => 'player_id='.Yii::app()->user->id
+						'condition' => $condition,
 				),
 				'pagination'=>array(
 						'pageSize'=>50,
@@ -88,23 +119,34 @@ class QuizController extends Controller
 		$submit->player_id=Yii::app()->user->id;
 		
 		$this->performAjaxValidation($submit);
-		if(isset($_POST['QuizSubmit']))
-		{
+		if(isset($_POST['QuizSubmit'])) {
 			$submit->attributes=$_POST['QuizSubmit'];
-			if($submit->save()){
-				$this->redirect('/quiz/player');
+			if($submit->save()){//INIT
+				
+				$url = 'http://api.freemined.com/api/quiz/'.$submit->player_id.'/'.$submit->id;
+				HttpService::get($url);
+				
+// 				$rpath = 'D:/workspace/datamining/competition/r/';
+// 				$script='Rscript --vanilla '.$rpath.'test.R ' . $submit->id .' ' . $submit->player_id;
+// 				echo system($script);
+				
+ 				$this->redirect('/quiz/player');
 			}
 		}
 		
 		$this->render('submit',array(
-				'model'=>$submit,
+			'model'=>$submit,
 		));
 	}
 	
 	public function actionSource($id){
 		$submit=QuizSubmit::model()->findByPk($id);
+		
 		if($submit===null)
 			throw new CHttpException(404,'The requested page does not exist.');
+		
+		if($submit->player_id != Yii::app()->user->id)
+			throw new CHttpException(400,'You can\'t view others source!!');
 		
 		$this->render('source',array(
 				'model'=>$submit,
@@ -113,9 +155,17 @@ class QuizController extends Controller
 
 	//owner===============================================================
 	public function actionOwner(){
-		$dataProvider=new CActiveDataProvider('VQuiz',array(
+		
+		//查类别
+		$condition='owner_id='.Yii::app()->user->id;
+		if(isset($_GET['category']))
+			$condition.= ' AND category=' . $_GET['category'];
+		if(isset($_GET['status']))
+			$condition.= " AND status='" . $_GET['status']."'";
+		
+		$dataProvider=new CActiveDataProvider('VQuizBasic',array(
 				'criteria' => array(
-						'condition' => 'owner_id='.Yii::app()->user->id
+						'condition' => $condition,
 				),
 				'pagination'=>array(
 						'pageSize'=>50,
@@ -123,10 +173,9 @@ class QuizController extends Controller
 				'sort'=>array(
 						'defaultOrder'=>'id DESC',
 				),
-				
 		));
 		
-		$this->render('index',array(
+		$this->render('owner',array(
 				'dataProvider'=>$dataProvider,
 		));
 	}
@@ -134,8 +183,7 @@ class QuizController extends Controller
 	public function actionCreate(){
 		$quiz=new Quiz;
 		$quiz->owner_id=Yii::app()->user->id;
-
-// 		$this->performAjaxValidation($quiz);
+//  		$this->performAjaxValidation($quiz);
 
 		if(isset($_POST['Quiz'])) {
 			$quiz->attributes=$_POST['Quiz'];
@@ -144,81 +192,45 @@ class QuizController extends Controller
 			
 			if($quiz->save()){
 				$qid=$quiz->id;
-				if(isset($_POST['train'])){
-					$quizData=new QuizData;
-					$quizData->qid=$qid;
-					$quizData->type=QuizService::$TYPE_TRAIN;
-					$quizData->data=$_POST['train'];
-					$quizData->save();
-				}
+				$quizStatus=new QuizStatus;
+				$quizStatus->qid=$qid;
 				
-				if(isset($_POST['test'])){
-					$quizData=new QuizData;
-					$quizData->qid=$qid;
-					$quizData->type=QuizService::$TYPE_TEST;
-					$quizData->data=$_POST['test'];
-					$quizData->save();
+				if($quizStatus->save()){
+					QuizService::uploadDataSet($qid);
+					$this->redirect(array('view','id'=>$qid));
 				}
-				
-				if(isset($_POST['result'])){
-					$quizData=new QuizData;
-					$quizData->qid=$qid;
-					$quizData->type=QuizService::$TYPE_RESULT;
-					$quizData->data=$_POST['result'];
-					$quizData->save();
-				}
-				
-				$this->redirect(array('view','id'=>$qid));
 			}
 		}	
 		
 		$this->render('create',array(
 				'model'=>$quiz,
 		));
-// 			if($model->save()){
-// 				if(isset($_FILES['train'])){
-// 					$data=$_FILES['train'];
-// 					$dir=QuizService::$PATH_LOCAL_DATA.$model->id."/";
-// 					FileService::upload($data['tmp_name'],$dir,QuizService::$FILE_TRAIN);
-					
-// 					$quizData=new QuizData;
-// 					$quizData->qid=$model->id;
-// 					$quizData->type=QuizService::$TYPE_TRAIN;
-// 					$quizData->local=$dir.QuizService::$FILE_TRAIN;
-// 					$quizData->file=QuizService::$PATH_REMOTE_DATA.$model->id."/".QuizService::$FILE_TRAIN;
-// 					$quizData->save();
-// 				}
-
-// 				if(isset($_FILES['test'])){
-// 					$data=$_FILES['test'];
-// 					$dir=QuizService::$PATH_LOCAL_DATA.$model->id."/";
-// 					FileService::upload($data['tmp_name'],$dir,QuizService::$FILE_TEST);
-					
-// 					$quizData=new QuizData;
-// 					$quizData->qid=$model->id;
-// 					$quizData->type=QuizService::$TYPE_TEST;
-// 					$quizData->local=$dir.QuizService::$FILE_TEST;
-// 					$quizData->file=QuizService::$PATH_REMOTE_DATA.$model->id."/".QuizService::$FILE_TEST;
-// 					$quizData->save();
-// 				}
-
-// 				$this->redirect(array('view','id'=>$model->id));
-// 			}
-
-		
 	}
 	
 	public function actionUpdate($id)	{
 		$model=$this->loadModel($id);
 		$this->performAjaxValidation($model);
+		
+		$train=QuizService::getDataSet($id, 0);
+		$test=QuizService::getDataSet($id, 1);
+		$result=QuizService::getDataSet($id, 2);
+		
 		if(isset($_POST['Quiz']))		{
 			$model->attributes=$_POST['Quiz'];
-			if($model->save())
+			if(isset($_POST['content']))
+				$model->content=$_POST['content'];
+			
+			if($model->save()){
+				QuizService::uploadDataSet($id);
 				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
 
 		$this->render('update',array(
 				'model'=>$model,
+				'train'=>$train,
+				'test'=>$test,
+				'result'=>$result,
 		));
 	}
 

@@ -7,21 +7,22 @@ import org.conan.base.BaseObject;
 /**
  * This is QuizSubmit Model DTO
  * @author Conan Zhang
- * @date 2012-07-27
+ * @date 2012-10-29
  */
 public class QuizSubmitDTO extends BaseObject {
 
-private static final long serialVersionUID = 13433808128021L;
+private static final long serialVersionUID = 13515187800932L;
 
 public QuizSubmitDTO(){}
-public QuizSubmitDTO(Integer qid, String lang, String code, Timestamp create_date, Integer uid, Integer status, Integer result){
+public QuizSubmitDTO(Integer qid, String lang, String code, Timestamp create_date, Integer player_id, String status, String result, String description){
 this.qid = qid;
 this.lang = lang;
 this.code = code;
 this.create_date = create_date;
-this.uid = uid;
+this.player_id = player_id;
 this.status = status;
 this.result = result;
+this.description = description;
 }
 
 
@@ -30,9 +31,10 @@ private Integer qid;
 private String lang;
 private String code;
 private Timestamp create_date;
-private Integer uid;
-private Integer status;
-private Integer result;
+private Integer player_id;
+private String status;
+private String result;
+private String description;
 
 public int getId() {
 return this.id;
@@ -50,14 +52,17 @@ return this.code;
 public Timestamp getCreate_date (){
 return this.create_date;
 }
-public Integer getUid (){
-return this.uid;
+public Integer getPlayer_id (){
+return this.player_id;
 }
-public Integer getStatus (){
+public String getStatus (){
 return this.status;
 }
-public Integer getResult (){
+public String getResult (){
 return this.result;
+}
+public String getDescription (){
+return this.description;
 }
 
 
@@ -77,14 +82,17 @@ this.code = code;
 public void setCreate_date(Timestamp create_date) {
 this.create_date = create_date;
 }
-public void setUid(Integer uid) {
-this.uid = uid;
+public void setPlayer_id(Integer player_id) {
+this.player_id = player_id;
 }
-public void setStatus(Integer status) {
+public void setStatus(String status) {
 this.status = status;
 }
-public void setResult(Integer result) {
+public void setResult(String result) {
 this.result = result;
+}
+public void setDescription(String description) {
+this.description = description;
 }
 
 

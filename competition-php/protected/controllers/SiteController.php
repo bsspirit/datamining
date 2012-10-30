@@ -17,9 +17,32 @@ class SiteController extends Controller
 				),
 		);
 	}
+	
+	public function actionRegister(){
+		if(!Yii::app()->user->isGuest)
+			$this->redirect(Yii::app()->homeUrl);
+	
+		$user=new User;
+	
+		if(isset($_POST['ajax']) && $_POST['ajax']==='register-form') {
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+	
+		if(isset($_POST['User'])) {
+			$user->attributes=$_POST['User'];
+			if($user->validate()){
+				$user->password=md5($user->password);
+				if($user->save()){//注册
+					AuthService::assign($user->id);	
+					$this->redirect('/site/login');
+				}
+			}
+		}
+		$this->render('register',array('model'=>$user));
+	}
 
-	public function actionLogin()
-	{
+	public function actionLogin(){
 		if(!Yii::app()->user->isGuest)
 			$this->redirect(Yii::app()->homeUrl);
 

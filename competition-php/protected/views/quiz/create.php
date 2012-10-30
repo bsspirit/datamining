@@ -13,48 +13,47 @@
 		<?php echo $form->labelEx($model,'title'); ?>
 		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>32)); ?>
 	</div>
+	
+	<div class="row">
+		<span class="label">Category</span><br/>
+		<?php echo Quiz::dropDownCategory($model->category)?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'content'); ?>
 		<textarea name="content" style="width:auto;height:300px;visibility:hidden;"><?php echo $model->content?></textarea>
 	</div>
 
-	<div class="row">
-		结束日期：
-		<?php 
-			$this->widget('zii.widgets.jui.CJuiDatePicker', array(  
-	        'model'=>$model,  
-	        'attribute'=>'end_date',  
-	        'options' => array(  
-	            'dateFormat'=>'yy-mm-dd',  
-	        ),  
-	        'htmlOptions'=>array(  
-	            'style'=>'width:130px;',  
-	        )  
-	    	));
-		?>
-		(如果不写则无限期)
+	<div class="box">
+		<span style="color:blue;font-size:1.5em;">上传数据，csv格式文件,以逗号分隔</span>
 	</div>
 	
 	<div class="row">
-		训练集数据：(以,分隔)<br/>
-		<textarea name="train" rows="10" class="w600"></textarea>
+		<span class="label">Training Set</span><br/>
+		<input type="file" name="train"/><br/>
+		<?php if(!empty($train)){?>
+		<span style="color:red">已上传:<a href="<?php echo $train["remote"]?>">train.csv</a></span><br/>
+		<?php }?>
 	</div>
 	
 	<div class="row">
-		测试集数据：(以,分隔)<br/>
-		<textarea name="test" rows="10" class="w600"></textarea>
+		<span class="label">Testing Set</span><br/>
+		<input type="file" name="test"/><br/>
+		<?php if(!empty($test)){?>
+		<span style="color:red">已上传:<a href="<?php echo $test["remote"]?>">test.csv</a></span><br/>
+		<?php }?>
 	</div>
 	
 	<div class="row">
-		结果集数据：(以,分隔)<br/>
-		<textarea name="result" rows="10" class="w600"></textarea>
+		<span class="label">Result Set</span><br/>
+		<input type="file" name="result"/><br/>
+		<?php if(!empty($result)){?>
+		<span style="color:red">已上传:<a href="<?php echo $result["remote"]?>">result.csv</a></span>
+		<?php }?>
 	</div>
 	
-	<input type="hidden" name="owner_id" value="2"/>
-
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('创建'); ?>
+		<?php echo CHtml::submitButton('Create'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

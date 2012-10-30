@@ -10,7 +10,7 @@ import org.conan.dm.user.model.UserDTO;
 /**
  * This is User DAO interface
  * @author Conan Zhang
- * @date 2012-10-26
+ * @date 2012-10-29
  */
 public interface UserDAO extends MybatisDAO {
 

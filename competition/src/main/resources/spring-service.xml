@@ -10,11 +10,12 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 <!--
     This is project's spring-service.xml.
     @author Conan Zhang
-    @date 2012-10-26
+    @date 2012-10-30
 -->
 	
 	<context:annotation-config />
 	<context:component-scan base-package="org.conan.dm.quiz.service.impl"/>
 	<context:component-scan base-package="org.conan.dm.user.service.impl"/>
+	<context:component-scan base-package="org.conan.dm.config.service.impl"/>
 
 </beans>

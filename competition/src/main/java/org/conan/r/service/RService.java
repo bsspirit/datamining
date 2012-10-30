@@ -11,38 +11,44 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 abstract public class RService {
-    
+
     final private static Logger log = LoggerFactory.getLogger(RServiceImpl.class);
-    
-    final private static boolean SHOW_CONSOLE = false;
-    
+
+    final private static boolean SHOW_CONSOLE = true;
+
+    final static RResultSet rset = new RResultSet();
+
     public static Rengine r = null;
-    
+
     abstract protected void call(String file, Map<String, String> params);// file
+
     abstract protected List<String> call2(String file, Map<String, String> params);// content
-    
-    public void run(String file, Map<String, String> params) {
+
+    public RResultSet run(String file, Map<String, String> params) {
         initR();
         call(file, params);
         destory();
+
+        log.info("SUCCESSFUL: RETURN " + rset.getResult());
+        return rset;
     }
-    
+
     public List<String> run2(String content, Map<String, String> params) {
         initR();
         List<String> list = call2(content, params);
         destory();
         return list;
     }
-    
+
     private void initR() {
         if (r != null)
             return;
-        
+
         if (!Rengine.versionCheck()) {
             log.error("** Version mismatch - Java files don't match library version.");
             System.exit(1);
         }
-        
+
         log.debug("Creating Rengine (with vanilla)");
         r = new Rengine(new String[] { "--vanilla" }, false, (SHOW_CONSOLE ? new TextConsole() : null));
         if (!r.waitForR()) {
@@ -50,7 +56,7 @@ abstract public class RService {
             return;
         }
     }
-    
+
     private void destory() {
         r.end();
     }
@@ -58,16 +64,34 @@ abstract public class RService {
 
 class TextConsole implements RMainLoopCallbacks {
     final private static Logger log = LoggerFactory.getLogger(RServiceImpl.class);
-    
+
     public void rWriteConsole(Rengine re, String text, int oType) {
-        if (text != null && !text.equals("") && text.length() > 1)
+        if (text != null && !text.equals("") && text.length() > 1) {
             log.debug(text);
+            if (text.contains(RResultSet.LINE_RESULT)) {
+                RService.rset.sign = true;
+            }
+
+            if (text.contains(RResultSet.LINE_LAST)) {
+                RService.rset.sign = false;
+            }
+
+            if (RResultSet.containsInSet(text)) {
+                RService.rset.compileError = true;
+            }
+
+            if (RService.rset.sign) {
+                RService.rset.sb.append(text);
+            }
+
+        }
+
     }
-    
+
     public void rBusy(Rengine re, int which) {
         log.debug("rBusy(" + which + ")");
     }
-    
+
     public String rReadConsole(Rengine re, String prompt, int addToHistory) {
         log.debug(prompt);
         try {
@@ -79,21 +103,21 @@ class TextConsole implements RMainLoopCallbacks {
         }
         return null;
     }
-    
+
     public void rShowMessage(Rengine re, String message) {
         log.debug("rShowMessage \"" + message + "\"");
     }
-    
+
     public String rChooseFile(Rengine re, int newFile) {
         return null;
     }
-    
+
     public void rFlushConsole(Rengine re) {
     }
-    
+
     public void rLoadHistory(Rengine re, String filename) {
     }
-    
+
     public void rSaveHistory(Rengine re, String filename) {
     }
 }

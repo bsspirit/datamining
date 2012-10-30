@@ -31,7 +31,7 @@ public class RServiceImpl extends RService {
                 String k = iter.next();
                 String v = params.get(k);
                 r.assign(k, params.get(k));
-                log.debug(k + "<-" + v + "\n");
+                log.debug(k + "<-" + v);
             }
         }
         String source = "source(\"" + file + "\",echo=TRUE)";

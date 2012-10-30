@@ -11,7 +11,7 @@ class AuthController extends Controller {
 	public function accessRules() {
 		return array(
 			array('allow',
-				'actions'=>array('init','clear','assign','revoke'),//出始化角色，清空角色，授权，取消授权
+				'actions'=>array('init','clear'),//出始化角色，清空角色，授权，取消授权
 				'users'=>array('admin'),
 			),
 			array('deny',
@@ -50,34 +50,6 @@ class AuthController extends Controller {
 		$auth->assign('admin','1');
 		$auth->assign('owner','2');
 		$auth->assign('player','3');
-	}
-	
-	public function actionAssign(){
-		$uid=$_REQUEST["uid"];
-		$type=$_REQUEST["type"];
-		
-		if(!empty($uid) && !empty($type)){
-			$auth=Yii::app()->authManager;
-			
-			if(!$auth->isAssigned($type,$uid))
-				$auth->assign($type,$uid);
-			
-			echo 'assign ' . $uid . ':'.$type;
-		}
-	}
-	
-	public function actionRevoke(){
-		$uid=$_REQUEST["uid"];
-		$type=$_REQUEST["type"];
-		
-		if(!empty($uid) && !empty($type)){
-			$auth=Yii::app()->authManager;
-				
-			if($auth->isAssigned($type,$uid))
-				$auth->revoke($type,$uid);
-				
-			echo 'revoke ' . $uid . ':'.$type;
-		}
 	}
 	
 	public function actionClear(){

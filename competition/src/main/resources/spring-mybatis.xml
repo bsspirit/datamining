@@ -8,7 +8,7 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<!-- base dao package -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="org.conan.dm.quiz.dao" />
+		<property name="basePackage" value="org.conan.dm.quiz.dao,org.conan.dm.user.dao,org.conan.dm.config.dao" />
 	</bean>
 
 	<!-- mybatis.xml configure file -->

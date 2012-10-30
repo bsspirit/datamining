@@ -7,19 +7,20 @@ import org.conan.base.BaseObject;
 /**
  * This is Quiz Model DTO
  * @author Conan Zhang
- * @date 2012-07-27
+ * @date 2012-10-29
  */
 public class QuizDTO extends BaseObject {
 
-private static final long serialVersionUID = 13433808127920L;
+private static final long serialVersionUID = 13515187800931L;
 
 public QuizDTO(){}
-public QuizDTO(String title, String content, Timestamp create_date, Timestamp end_date, Integer uid){
+public QuizDTO(String title, String content, Timestamp create_date, Timestamp end_date, Integer owner_id, Integer category){
 this.title = title;
 this.content = content;
 this.create_date = create_date;
 this.end_date = end_date;
-this.uid = uid;
+this.owner_id = owner_id;
+this.category = category;
 }
 
 
@@ -28,7 +29,8 @@ private String title;
 private String content;
 private Timestamp create_date;
 private Timestamp end_date;
-private Integer uid;
+private Integer owner_id;
+private Integer category;
 
 public int getId() {
 return this.id;
@@ -46,8 +48,11 @@ return this.create_date;
 public Timestamp getEnd_date (){
 return this.end_date;
 }
-public Integer getUid (){
-return this.uid;
+public Integer getOwner_id (){
+return this.owner_id;
+}
+public Integer getCategory (){
+return this.category;
 }
 
 
@@ -67,8 +72,11 @@ this.create_date = create_date;
 public void setEnd_date(Timestamp end_date) {
 this.end_date = end_date;
 }
-public void setUid(Integer uid) {
-this.uid = uid;
+public void setOwner_id(Integer owner_id) {
+this.owner_id = owner_id;
+}
+public void setCategory(Integer category) {
+this.category = category;
 }
 
 

@@ -7,18 +7,18 @@ import org.conan.base.BaseObject;
 /**
  * This is QuizData Model DTO
  * @author Conan Zhang
- * @date 2012-07-27
+ * @date 2012-10-29
  */
 public class QuizDataDTO extends BaseObject {
 
-private static final long serialVersionUID = 13433808127980L;
+private static final long serialVersionUID = 13515187800930L;
 
 public QuizDataDTO(){}
-public QuizDataDTO(Integer qid, Integer type, String file, String local, Timestamp create_date){
+public QuizDataDTO(Integer qid, Integer type, String file, String remote, Timestamp create_date){
 this.qid = qid;
 this.type = type;
 this.file = file;
-this.local = local;
+this.remote = remote;
 this.create_date = create_date;
 }
 
@@ -27,7 +27,7 @@ private int id;
 private Integer qid;
 private Integer type;
 private String file;
-private String local;
+private String remote;
 private Timestamp create_date;
 
 public int getId() {
@@ -43,8 +43,8 @@ return this.type;
 public String getFile (){
 return this.file;
 }
-public String getLocal (){
-return this.local;
+public String getRemote (){
+return this.remote;
 }
 public Timestamp getCreate_date (){
 return this.create_date;
@@ -64,8 +64,8 @@ this.type = type;
 public void setFile(String file) {
 this.file = file;
 }
-public void setLocal(String local) {
-this.local = local;
+public void setRemote(String remote) {
+this.remote = remote;
 }
 public void setCreate_date(Timestamp create_date) {
 this.create_date = create_date;

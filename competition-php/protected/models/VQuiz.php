@@ -10,8 +10,9 @@
  * @property string $end_date
  * @property integer $owner_id
  * @property string $owner_name
- * @property string $correct
+ * @property double $correct
  * @property string $count
+ * @property integer $category
  */
 class VQuiz extends CActiveRecord
 {
@@ -42,15 +43,14 @@ class VQuiz extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('title, owner_id', 'required'),
-			array('id, owner_id', 'numerical', 'integerOnly'=>true),
-			array('title', 'length', 'max'=>16),
-			array('owner_name', 'length', 'max'=>128),
-			array('correct', 'length', 'max'=>32),
+			array('id, owner_id, category', 'numerical', 'integerOnly'=>true),
+			array('correct', 'numerical'),
+			array('title, owner_name', 'length', 'max'=>16),
 			array('count', 'length', 'max'=>21),
 			array('create_date, end_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, create_date, end_date, owner_id, owner_name, correct, count', 'safe', 'on'=>'search'),
+			array('id, title, create_date, end_date, owner_id, owner_name, correct, count, category', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -79,6 +79,7 @@ class VQuiz extends CActiveRecord
 			'owner_name' => 'Owner Name',
 			'correct' => 'Correct',
 			'count' => 'Count',
+			'category' => 'Category',
 		);
 	}
 
@@ -99,8 +100,9 @@ class VQuiz extends CActiveRecord
 		$criteria->compare('end_date',$this->end_date,true);
 		$criteria->compare('owner_id',$this->owner_id);
 		$criteria->compare('owner_name',$this->owner_name,true);
-		$criteria->compare('correct',$this->correct,true);
+		$criteria->compare('correct',$this->correct);
 		$criteria->compare('count',$this->count,true);
+		$criteria->compare('category',$this->category);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -10,14 +10,25 @@ CREATE TABLE t_quiz(
     content MEDIUMTEXT NULL ,
     create_date TIMESTAMP NULL  DEFAULT now(),
     end_date TIMESTAMP NULL ,
-    owner_id INT NOT NULL 
+    owner_id INT NOT NULL ,
+    category INT NOT NULL 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE t_quiz_status(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    qid INT NOT NULL ,
+    status VARCHAR(16) NULL  DEFAULT 'WAIT',
+    create_date TIMESTAMP NULL  DEFAULT now(),
+    description VARCHAR(512) NULL 
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE UNIQUE INDEX t_quiz_status_IDX_0 on t_quiz_status(qid);
 
 CREATE TABLE t_quiz_data(
     id INT PRIMARY KEY AUTO_INCREMENT,
     qid INT NOT NULL ,
     type INT NOT NULL ,
-    data MEDIUMTEXT NOT NULL ,
+    file VARCHAR(256) NOT NULL ,
+    remote VARCHAR(256) NOT NULL ,
     create_date TIMESTAMP NULL  DEFAULT now()
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -28,16 +39,23 @@ CREATE TABLE t_quiz_submit(
     code MEDIUMTEXT NOT NULL ,
     create_date TIMESTAMP NULL  DEFAULT now(),
     player_id INT NOT NULL ,
-    status INT NULL  DEFAULT 0,
-    result INT NULL  DEFAULT 0
+    status VARCHAR(8) NULL  DEFAULT 'INIT',
+    result VARCHAR(16) NULL  DEFAULT 'INIT',
+    description VARCHAR(512) NULL 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE t_user(
     id INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(16) NOT NULL ,
-    password VARCHAR(16) NOT NULL ,
+    password VARCHAR(64) NOT NULL ,
     email VARCHAR(128) NULL ,
     create_date TIMESTAMP NULL  DEFAULT now(),
-    title VARCHAR(16) NULL ,
-    type INT NULL  DEFAULT 2
+    title VARCHAR(16) NULL 
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE t_config(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(16) NOT NULL ,
+    create_date TIMESTAMP NULL  DEFAULT now(),
+    r VARCHAR(512) NOT NULL 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;

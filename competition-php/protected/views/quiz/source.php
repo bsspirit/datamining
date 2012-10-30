@@ -13,9 +13,7 @@
 	<div class="row">
 		源代码：<br/>
 		<div class="code-r">
-		<textarea rows="20" cols="70" name="code">
-			<?php echo ($model->code)?>
-		</textarea>
+		<textarea rows="20" cols="70" name="code"><?php echo ($model->code)?></textarea>
 		</div>
 	</div>
 	

@@ -18,7 +18,7 @@ import org.conan.dm.quiz.model.QuizSubmitDTO;
 /**
  * This is QuizSubmit Service implemention
  * @author Conan Zhang
- * @date 2012-07-27
+ * @date 2012-10-29
  */
 @Service(value="quizSubmitService")
 public class QuizSubmitServiceImpl extends SpringServiceImpl implements QuizSubmitService {

@@ -8,3 +8,4 @@ META-INF
 bin
 .bak
 logs
+*/metadata/data/*

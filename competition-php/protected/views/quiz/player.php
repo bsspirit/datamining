@@ -1,34 +1,81 @@
 <h1>我的竞赛题目状态列表</h1>
 
-<?php 
+<?php include_once dirname(__FILE__).'/../common/_category.php';?>
+
+<?php
+
+function colorResult($result){
+	$color = 'red';
+	switch($result){
+		case 'COMPILE':
+		case 'INIT':
+		case 'ERROR':
+			$color = 'red';
+			break;
+		case 'CORRECT':
+			$color = 'green';
+			break;
+		default:
+			$color = 'blue';
+			break;
+	}
+	$html = '<span style="color:'.$color.'">'.$result.'</span>';
+	return $html;
+}
+
+function colorStatus($status){
+	$color = 'red';
+	switch($status){
+		case 'INIT':
+			$color = 'red';
+			break;
+		case 'RUNNING':
+			$color = 'blue';
+			break;
+		case 'FINISH':
+			$color = 'green';
+			break;
+	}
+	$html = '<span style="color:'.$color.'">'.$status.'</span>';
+	return $html;
+}
+
 $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'quiz-grid',
 	'dataProvider'=>$dataProvider,
 	'columns'=>array(
-		'id',
+		'qid',
 		array(
-			'name'=>'题目ID',
-			'value'=>'$data->qid'
+				'name'=>'Title',
+				'type' => 'raw',
+				'value' => 'CHtml::link($data->title,Yii::app()->createUrl("quiz/view", array("id"=>$data->qid)))'
 		),
 		array(
-			'name'=>'题目标题',
+				'name'=>'Source',
+				'type' => 'raw',
+				'value' => 'CHtml::link("view",Yii::app()->createUrl("quiz/source", array("id"=>$data->id)))'
+		),
+		array(
+			'name'=>'Result',
 			'type' => 'raw',
-			'value' => 'CHtml::link($data->title,Yii::app()->createUrl("quiz/view", array("id"=>$data->qid)))'
+			'value' => 'colorResult($data->result)',
 		),
 		array(
-			'name'=>'源代码',
+			'name'=>'Status',
 			'type' => 'raw',
-			'value' => 'CHtml::link("查看",Yii::app()->createUrl("quiz/source", array("id"=>$data->id)))'
+			'value' => 'colorStatus($data->status)',
 		),
-		'result',
-		'status',
+		array(
+			'name'=>'Category',
+			'value' => 'Quiz::mappingCategory($data->category)',
+		),
 		'lang',
+// 		array(
+// 			'name'=>'Memory',
+// 			'value'=>'',
+// 		),
 		array(
-			'name'=>'内存',
-			'value'=>'',
-		),
-		array(
-			'name'=>'运行时间',
+			'name'=>'Runtime',
 			'value'=>'',
 		),
 		'code_length',

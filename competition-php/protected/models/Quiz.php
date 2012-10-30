@@ -10,6 +10,7 @@
  * @property string $create_date
  * @property string $end_date
  * @property integer $owner_id
+ * @property integer $category
  */
 class Quiz extends CActiveRecord
 {
@@ -39,13 +40,13 @@ class Quiz extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, content, owner_id', 'required'),
-			array('owner_id', 'numerical', 'integerOnly'=>true),
+			array('title, owner_id', 'required'),
+			array('owner_id, category', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>16),
-			array('create_date, end_date', 'safe'),
+			array('content, create_date, end_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, content, create_date, end_date, owner_id', 'safe', 'on'=>'search'),
+			array('id, title, content, create_date, end_date, owner_id, category', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,9 +70,10 @@ class Quiz extends CActiveRecord
 			'id' => 'ID',
 			'title' => 'Title',
 			'content' => 'Content',
-			'create_date' => 'Create Date',
-			'end_date' => 'End Date',
+			'create_date' => 'CreateDate',
+			'end_date' => 'EndDate',
 			'owner_id' => 'Owner',
+			'category' => 'Category',
 		);
 	}
 
@@ -92,9 +94,43 @@ class Quiz extends CActiveRecord
 		$criteria->compare('create_date',$this->create_date,true);
 		$criteria->compare('end_date',$this->end_date,true);
 		$criteria->compare('owner_id',$this->owner_id);
+		$criteria->compare('category',$this->category);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+	
+	public static function mappingCategory($category){
+		$label='';
+		switch($category){
+			case 1:
+				$label='Algorithm';
+				break;
+			case 2:
+				$label='Classification';
+				break;
+			case 3:
+				$label='Regression';
+				break;
+		}
+		return $label;
+	}
+	public static function dropDownCategory($category){
+		if(empty($category)) $category=1;
+		switch($category){
+			case 1:$c1='SELECTED';break;
+			case 2:$c2='SELECTED';break;
+			case 3:$c3='SELECTED';break;
+		}
+		
+		$html='<select name="Quiz[category]">';
+		$html.='<option value="1" '.$c1.'>Algorithm</option>';
+		$html.='<option value="2" '.$c2.'>Classification</option>';
+		$html.='<option value="3" '.$c3.'>Regression</option>';
+		$html.='</select>';
+		
+		return $html;
+	}
+
 }

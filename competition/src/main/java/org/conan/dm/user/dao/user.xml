@@ -4,7 +4,7 @@
 <!--
     This is User sql
     @author Conan Zhang
-    @date 2012-10-26
+    @date 2012-10-29
 -->
 <mapper namespace="org.conan.dm.user.dao.UserDAO">
 
@@ -13,7 +13,7 @@
         <result property="password" column="password" javaType="java.lang.String"/>
         <result property="email" column="email" javaType="java.lang.String"/>
         <result property="create_date" column="create_date" javaType="java.sql.Timestamp"/>
-        <result property="type" column="type" javaType="java.lang.Integer"/>
+        <result property="title" column="title" javaType="java.lang.String"/>
         <result property="name" column="name" javaType="java.lang.String"/>
     </resultMap>
 
@@ -23,7 +23,7 @@
             password,
             email,
             create_date,
-            type,
+            title,
             name
     </sql>
 
@@ -31,7 +31,7 @@
         <if test="password!=null">password = password(#{password}) and</if>
         <if test="email!=null">email = #{email} and</if>
         <if test="create_date!=null">create_date = #{create_date} and</if>
-        <if test="type!=null">type = #{type} and</if>
+        <if test="title!=null">title = #{title} and</if>
         <if test="name!=null">name = #{name} and</if>
         1=1
     </sql>
@@ -41,13 +41,13 @@
             password,
             <if test="email!=null ">email,</if>
             <if test="create_date!=null ">create_date,</if>
-            <if test="type!=null ">type,</if>
+            <if test="title!=null ">title,</if>
             name
         ) VALUES (
             password(#{password}),
             <if test="email!=null">#{email},</if>
             <if test="create_date!=null">#{create_date},</if>
-            <if test="type!=null">#{type},</if>
+            <if test="title!=null">#{title},</if>
             #{name}
         )
     </insert>
@@ -70,7 +70,7 @@
             <if test="password!=null">password = password(#{password}),</if>
             <if test="email!=null">email = #{email},</if>
             <if test="create_date!=null">create_date = #{create_date},</if>
-            <if test="type!=null">type = #{type},</if>
+            <if test="title!=null">title = #{title},</if>
             <if test="name!=null">name = #{name},</if>
             id = #{id}
         WHERE

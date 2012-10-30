@@ -4,7 +4,7 @@
 <!--
     This is QuizData sql
     @author Conan Zhang
-    @date 2012-07-27
+    @date 2012-10-29
 -->
 <mapper namespace="org.conan.dm.quiz.dao.QuizDataDAO">
 
@@ -12,7 +12,7 @@
         <result property="id" column="id" javaType="java.lang.Integer"/>
         <result property="type" column="type" javaType="java.lang.Integer"/>
         <result property="file" column="file" javaType="java.lang.String"/>
-        <result property="local" column="local" javaType="java.lang.String"/>
+        <result property="remote" column="remote" javaType="java.lang.String"/>
         <result property="create_date" column="create_date" javaType="java.sql.Timestamp"/>
         <result property="qid" column="qid" javaType="java.lang.Integer"/>
     </resultMap>
@@ -22,7 +22,7 @@
             id,
             type,
             file,
-            local,
+            remote,
             create_date,
             qid
     </sql>
@@ -30,7 +30,7 @@
     <sql id="condition">
         <if test="type!=null">type = #{type} and</if>
         <if test="file!=null">file = #{file} and</if>
-        <if test="local!=null">local = #{local} and</if>
+        <if test="remote!=null">remote = #{remote} and</if>
         <if test="create_date!=null">create_date = #{create_date} and</if>
         <if test="qid!=null">qid = #{qid} and</if>
         1=1
@@ -40,13 +40,13 @@
         INSERT INTO t_quiz_data(
             type,
             file,
-            local,
+            remote,
             <if test="create_date!=null ">create_date,</if>
             qid
         ) VALUES (
             #{type},
             #{file},
-            #{local},
+            #{remote},
             <if test="create_date!=null">#{create_date},</if>
             #{qid}
         )
@@ -69,7 +69,7 @@
         SET
             <if test="type!=null">type = #{type},</if>
             <if test="file!=null">file = #{file},</if>
-            <if test="local!=null">local = #{local},</if>
+            <if test="remote!=null">remote = #{remote},</if>
             <if test="create_date!=null">create_date = #{create_date},</if>
             <if test="qid!=null">qid = #{qid},</if>
             id = #{id}

@@ -20,6 +20,7 @@ PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN"
 		<typeAlias alias="quizDataDTO" type="org.conan.dm.quiz.model.QuizDataDTO"/>
 		<typeAlias alias="quizSubmitDTO" type="org.conan.dm.quiz.model.QuizSubmitDTO"/>
 		<typeAlias alias="userDTO" type="org.conan.dm.user.model.UserDTO"/>
+		<typeAlias alias="configDTO" type="org.conan.dm.config.model.ConfigDTO"/>
 	</typeAliases>
 
 	<mappers>
@@ -31,6 +32,7 @@ PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN"
 		<mapper resource="org/conan/dm/quiz/dao/quizData.xml" />
 		<mapper resource="org/conan/dm/quiz/dao/quizSubmit.xml" />
 		<mapper resource="org/conan/dm/user/dao/user.xml" />
+		<mapper resource="org/conan/dm/config/dao/config.xml" />
 	</mappers>
 	
 </configuration>

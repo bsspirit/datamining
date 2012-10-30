@@ -10,7 +10,7 @@ import org.conan.dm.quiz.model.QuizDTO;
 /**
  * This is Quiz DAO interface
  * @author Conan Zhang
- * @date 2012-07-27
+ * @date 2012-10-29
  */
 public interface QuizDAO extends MybatisDAO {
 

@@ -4,9 +4,8 @@
 </div>
 
 <?php if(!empty($train)){?>
-<div class="view">
-	样本数据集:<br/>
-	<?php echo $train[0]["data"];?>
+<div class="view"> 
+	下载：<a href="<?php echo $train["remote"];?>">样本数据集</a>
 </div>
 <?php }?>
 
