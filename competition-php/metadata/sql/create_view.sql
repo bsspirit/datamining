@@ -21,13 +21,14 @@ CREATE VIEW v_quiz AS
 		FROM t_quiz_submit s
 		WHERE s.qid=t.id 
 	) AS count
-	FROM t_quiz t LEFT JOIN t_user u ON t.owner_id=u.id
+	FROM v_quiz_basic t LEFT JOIN t_user u ON t.owner_id=u.id
+	WHERE status = 'PASS'
 	GROUP BY t.id
 	ORDER BY t.id ASC;
 
 /*quiz状态视图*/
 CREATE VIEW v_quiz_status AS
-	SELECT s.id,s.qid,q.title,s.create_date,s.lang,s.status,s.result,s.player_id,u.name as player_name,length(s.code) as code_length,q.category
+	SELECT s.id,s.qid,q.title,s.create_date,s.lang,s.status,s.result,s.prob,s.player_id,u.name as player_name,length(s.code) as code_length,q.category
 	FROM t_quiz_submit s
 	LEFT JOIN t_quiz q ON s.qid=q.id
 	LEFT JOIN t_user u ON s.player_id=u.id

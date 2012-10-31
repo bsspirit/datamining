@@ -21,4 +21,4 @@ insert into t_quiz_status(qid,status) values(3,'PASS');
 insert into t_config(name,r) values('quiz.run','D:/workspace/datamining/competition/r/quiz.r');
 
 /*linux*/
-insert into t_config(name,r) values('quiz.run','D:/workspace/datamining/competition/r/quiz.r');
+insert into t_config(name,r) values('quiz.run','/root/deploy/datamining/competition/r');
