@@ -1,6 +1,6 @@
 <div class="blog">
 	<p><strong>R语言数据建模竞赛平台</strong>（comp.freemined.com）是基于R语言的算法平台，其主要于数据的建模竞赛。支持三大类数据分析问题，
-		<strong>算法问题</strong>，<strong>回归问题</strong>，<strong>分类问题</strong>。我们会收集企业的数据，把些企业中所面临的数据问题，以竞赛题目的方式，像广大的R语言用户征求答案。
+		<strong>算法问题</strong>，<strong>回归问题</strong>，<strong>分类问题</strong>。我们会收集企业的数据，把企业中所面临的数据问题，以竞赛题目的方式，像广大的R语言用户征求答案。
 		完成题目，你可以有自己的积分，你会脱颖而出，你价值会被发现。<p/>
 	<p><strong>2012年10月上线。</strong></p>
 	<p>
