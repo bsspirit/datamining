@@ -48,7 +48,7 @@ class AdminController extends Controller
 	//Quiz=========================================
 	public function actionQuiz(){
 		//查类别
-		$condition.= '1=1';
+		$condition= '1=1';
 		if(isset($_GET['category']))
 			$condition.= ' AND category=' . $_GET['category'];
 		if(isset($_GET['status']))
