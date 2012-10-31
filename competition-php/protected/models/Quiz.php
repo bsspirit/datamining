@@ -118,6 +118,10 @@ class Quiz extends CActiveRecord
 	}
 	public static function dropDownCategory($category){
 		if(empty($category)) $category=1;
+		$c1='';
+		$c2='';
+		$c3='';
+		
 		switch($category){
 			case 1:$c1='SELECTED';break;
 			case 2:$c2='SELECTED';break;
