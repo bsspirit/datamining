@@ -25,6 +25,7 @@ category1<-function(qid,answer,file){
 # answer[which(data>=50)]<-1
 
 category2<-function(qid,answer,file){
+  t<-0
   result<-read.csv(file,header=FALSE,encoding="utf-8",sep=",")
   t<-length(which(result==answer))/length(result)*100
   t
@@ -41,9 +42,9 @@ category2<-function(qid,answer,file){
 
 category3<-function(qid,answer,file){
   result<-read.csv(file,header=FALSE,encoding="utf-8",sep=",")
-  t=1
+  t<-0
   if(answer>=result$V1 && answer<=result$V2){
-    t=1
+    t<-1
   }
   t
 }

@@ -31,8 +31,8 @@ public class RMainRun {
         QuizService quizService = RMainRun.getContext().getBean(QuizService.class);
 
         // init
-        int sid = 2;
-        int uid = 3;
+        int sid = 17;
+        int uid = 5;
         int qid = quizSubmitService.getQuizSubmitById(sid).getQid();
 
         Map<String, Object> param = new HashMap<String, Object>();

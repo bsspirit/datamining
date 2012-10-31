@@ -641,3 +641,920 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2012/10/31 17:51:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:51:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:51:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:51:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:51:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:51:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:51:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:51:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:51:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:51:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:53:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:53:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:53:40 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'bsspirit@gmail.com' for key 't_user_IDX_1'. The SQL statement executed was: INSERT INTO `t_user` (`name`, `password`, `email`) VALUES (:yp0, :yp1, :yp2).
+in D:\workspace\datamining\competition-php\protected\controllers\SiteController.php (36)
+in D:\workspace\datamining\competition-php\index.php (13)
+2012/10/31 17:53:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'bsspirit@gmail.com' for key 't_user_IDX_1'. The SQL statement executed was: INSERT INTO `t_user` (`name`, `password`, `email`) VALUES (:yp0, :yp1, :yp2)' in D:\workspace\datamining\competition-php\framework\db\CDbCommand.php:354
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\db\ar\CActiveRecord.php(1014): CDbCommand->execute()
+#1 D:\workspace\datamining\competition-php\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 D:\workspace\datamining\competition-php\protected\controllers\SiteController.php(36): CActiveRecord->save()
+#3 D:\workspace\datamining\competition-php\framework\web\actions\CInlineAction.php(50): SiteController->actionRegister()
+#4 D:\workspace\datamining\competition-php\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\workspace\datamining\competition-php\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 D:\workspace\datamining\competition-php\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(276): CController->run('register')
+#8 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('site/register')
+#9 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/site/register
+HTTP_REFERER=http://comp.freemined.com/site/register
+---
+2012/10/31 17:53:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:54:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:54:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:54:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:54:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:54:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:54:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:54:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:54:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:55:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:55:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:55:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:55:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:55:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:55:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:55:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:56:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:56:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:56:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:56:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:56:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:56:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:56:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 17:56:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:22:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:22:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:22:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:22:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:23:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:24:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:24:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:24:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:24:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:24:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:24:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:24:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:24:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:24:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:24:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:24:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:25:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:25:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:25:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:25:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:25:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:25:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:25:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:25:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:25:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:29:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:29:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:29:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:29:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:29:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:30:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:30:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:30:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:32:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 18:33:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 20:15:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "themes/blueribbon/images/beta.png"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('themes/blueribb...')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/blueribbon/images/beta.png
+HTTP_REFERER=http://comp.freemined.com/
+---
+2012/10/31 20:15:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 20:15:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 20:15:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 20:15:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 20:15:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 20:16:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 20:16:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2012/10/31 20:16:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message '无法解析请求 "favicon.ico"。' in D:\workspace\datamining\competition-php\framework\web\CWebApplication.php:280
+Stack trace:
+#0 D:\workspace\datamining\competition-php\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 D:\workspace\datamining\competition-php\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 D:\workspace\datamining\competition-php\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---

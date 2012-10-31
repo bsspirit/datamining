@@ -3,14 +3,13 @@ source("db.r",encoding="utf-8")
 source("answer.r",encoding="utf-8")
 source("category.r",encoding="utf-8")
 
-# uid<-3
+# uid<-5
 # final<--1
-# sid<-3
-# category<-2
-# answer<--999
-# qid<-20
-# testFile<-"D:/workspace/datamining/competition-php/metadata/data/20/test.csv"
-# resultDataFile<-"D:/workspace/datamining/competition-php/metadata/data/20/result.csv"
+# sid<-15
+# category<-1
+# qid<-3
+# testFile<-"D:/workspace/datamining/competition-php/metadata/data/3/test.csv"
+# resultDataFile<-"D:/workspace/datamining/competition-php/metadata/data/3/result.csv"
 
 data<-read.csv(testFile,header=FALSE,encoding="utf-8",sep=",")
 answer<-userCode(sid)
