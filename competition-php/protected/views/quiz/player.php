@@ -44,6 +44,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'quiz-grid',
 	'dataProvider'=>$dataProvider,
 	'columns'=>array(
+		'id',
 		'qid',
 		array(
 				'name'=>'Title',
