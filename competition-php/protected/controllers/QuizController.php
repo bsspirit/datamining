@@ -42,6 +42,7 @@ class QuizController extends Controller
 	public function actionIndex(){
 		//查类别
 		
+		$condition='';
 		if(isset($_GET['category']))
 			$condition.= ' category=' . $_GET['category'];
 		

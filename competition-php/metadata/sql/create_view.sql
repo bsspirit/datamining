@@ -6,7 +6,7 @@ CREATE VIEW v_quiz_basic AS
 	FROM t_quiz q,t_quiz_status st,t_user u
 	WHERE q.id=st.qid
 	AND q.owner_id=u.id
-	AND st.status!='DELETE'
+	AND st.status!='DELETE';
 
 /*quiz带统计信息的视图*/
 CREATE VIEW v_quiz AS
@@ -23,7 +23,7 @@ CREATE VIEW v_quiz AS
 	) AS count
 	FROM t_quiz t LEFT JOIN t_user u ON t.owner_id=u.id
 	GROUP BY t.id
-	ORDER BY t.id ASC
+	ORDER BY t.id ASC;
 
 /*quiz状态视图*/
 CREATE VIEW v_quiz_status AS
@@ -39,4 +39,4 @@ CREATE VIEW v_user_role AS
 	FROM t_user u, authassignment r
 	WHERE u.id=r.userid
 	GROUP BY name
-	ORDER BY id ASC
+	ORDER BY id ASC;
