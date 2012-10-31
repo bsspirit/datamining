@@ -1,8 +1,8 @@
 <?php 
 class QuizService{
 
-// 	public static $PATH_LOCAL_DATA="/home/conan/app/DataMining/competition-php/metadata/data/";
-	public static $PATH_LOCAL_DATA="D:/workspace/datamining/competition-php/metadata/data/";
+	public static $PATH_LOCAL_DATA="/root/deploy/datamining/competition-php/metadata/data/";
+// 	public static $PATH_LOCAL_DATA="D:/workspace/datamining/competition-php/metadata/data/";
 	public static $PATH_REMOTE_DATA="http://download.freemined.com/";
 
 	public static $TYPE_TRAIN=0;
