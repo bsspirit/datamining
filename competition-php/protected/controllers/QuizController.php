@@ -71,6 +71,8 @@ class QuizController extends Controller
 		//查类别
 		if(isset($_GET['category']))
 			$condition.= ' category=' . $_GET['category'];
+		if(isset($_GET['qid']))
+			$condition.= ' qid=' . $_GET['qid'];
 		
 		$dataProvider=new CActiveDataProvider('VQuizStatus',array(
 				'criteria' => array(

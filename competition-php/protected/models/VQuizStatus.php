@@ -11,6 +11,7 @@
  * @property string $lang
  * @property string $status
  * @property string $result
+ * @property integer $prob
  * @property integer $player_id
  * @property string $player_name
  * @property string $code_length
@@ -45,14 +46,14 @@ class VQuizStatus extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('qid, player_id', 'required'),
-			array('id, qid, player_id, category', 'numerical', 'integerOnly'=>true),
+			array('id, qid, prob, player_id, category', 'numerical', 'integerOnly'=>true),
 			array('title, lang, result, player_name', 'length', 'max'=>16),
 			array('status', 'length', 'max'=>8),
 			array('code_length', 'length', 'max'=>10),
 			array('create_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, qid, title, create_date, lang, status, result, player_id, player_name, code_length, category', 'safe', 'on'=>'search'),
+			array('id, qid, title, create_date, lang, status, result, prob, player_id, player_name, code_length, category', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,15 +75,16 @@ class VQuizStatus extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'qid' => 'QuizID',
+			'qid' => 'Qid',
 			'title' => 'Title',
-			'create_date' => 'CreateDate',
-			'lang' => 'Language',
+			'create_date' => 'Create Date',
+			'lang' => 'Lang',
 			'status' => 'Status',
 			'result' => 'Result',
-			'player_id' => 'PlayerId',
-			'player_name' => 'PlayerName',
-			'code_length' => 'CodeLength',
+			'prob' => 'Prob',
+			'player_id' => 'Player',
+			'player_name' => 'Player Name',
+			'code_length' => 'Code Length',
 			'category' => 'Category',
 		);
 	}
@@ -105,6 +107,7 @@ class VQuizStatus extends CActiveRecord
 		$criteria->compare('lang',$this->lang,true);
 		$criteria->compare('status',$this->status,true);
 		$criteria->compare('result',$this->result,true);
+		$criteria->compare('prob',$this->prob);
 		$criteria->compare('player_id',$this->player_id);
 		$criteria->compare('player_name',$this->player_name,true);
 		$criteria->compare('code_length',$this->code_length,true);

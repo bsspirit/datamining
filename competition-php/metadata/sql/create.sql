@@ -1,6 +1,6 @@
 #This is competition CREATE SQL.
 #@author Conan Zhang
-#@date 2012-10-26
+#@date 2012-10-31
 
 use competition;
 
@@ -13,6 +13,8 @@ CREATE TABLE t_quiz(
     owner_id INT NOT NULL ,
     category INT NOT NULL 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE UNIQUE INDEX t_quiz_IDX_0 on t_quiz(title);
+CREATE  INDEX t_quiz_IDX_1 on t_quiz(owner_id);
 
 CREATE TABLE t_quiz_status(
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -31,6 +33,7 @@ CREATE TABLE t_quiz_data(
     remote VARCHAR(256) NOT NULL ,
     create_date TIMESTAMP NULL  DEFAULT now()
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE  INDEX t_quiz_data_IDX_0 on t_quiz_data(qid);
 
 CREATE TABLE t_quiz_submit(
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -41,8 +44,11 @@ CREATE TABLE t_quiz_submit(
     player_id INT NOT NULL ,
     status VARCHAR(8) NULL  DEFAULT 'INIT',
     result VARCHAR(16) NULL  DEFAULT 'INIT',
+    prob INT NULL ,
     description VARCHAR(512) NULL 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE  INDEX t_quiz_submit_IDX_0 on t_quiz_submit(qid);
+CREATE  INDEX t_quiz_submit_IDX_1 on t_quiz_submit(player_id);
 
 CREATE TABLE t_user(
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -52,6 +58,8 @@ CREATE TABLE t_user(
     create_date TIMESTAMP NULL  DEFAULT now(),
     title VARCHAR(16) NULL 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE UNIQUE INDEX t_user_IDX_0 on t_user(name);
+CREATE UNIQUE INDEX t_user_IDX_1 on t_user(email);
 
 CREATE TABLE t_config(
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -59,3 +67,5 @@ CREATE TABLE t_config(
     create_date TIMESTAMP NULL  DEFAULT now(),
     r VARCHAR(512) NOT NULL 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE UNIQUE INDEX t_config_IDX_0 on t_config(name);
+

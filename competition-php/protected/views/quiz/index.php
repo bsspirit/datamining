@@ -7,7 +7,7 @@
 function currectTotal($correct,$count){
 	$label='0%(0/0)';
 	if($count!=0){
-		$label  =$correct/$count.'%';
+		$label  = round(100*$correct/$count,2).'%';
 		$label .='('.$correct.'/'.$count.')';
 	} 
 	return $label;
@@ -28,8 +28,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			'value' => 'Quiz::mappingCategory($data->category)',
 		),
 		array(
-			'name'=>'Currect/Total',
-			'value'=>'currectTotal($data->correct,$data->count)',
+			'name'=>'Currect/Count',
+			'value'=>'currectTotal($data->currect,$data->count)',
 		),
 		'create_date',
 		'owner_name',

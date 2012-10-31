@@ -11,6 +11,7 @@ return array(
 	'language'=>'zh_cn',
 	'preload'=>array('log'),
 	'defaultController'=>'quiz',
+	'theme'=>'blueribbon',
 	'import'=>array(
 		'application.models.*',
 		'application.services.*',
@@ -55,6 +56,10 @@ return array(
 		'errorHandler'=>array(
             'errorAction'=>'site/error',
         ),
+		'themeManager'=>array(
+			'basePath'=>'themes',
+			'baseUrl'=>'/themes',
+		),
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
@@ -62,9 +67,9 @@ return array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
 				),
-				array(
-					'class'=>'CWebLogRoute',
-				),
+// 				array(
+// 					'class'=>'CWebLogRoute',
+// 				),
 			),
 		),
 	),

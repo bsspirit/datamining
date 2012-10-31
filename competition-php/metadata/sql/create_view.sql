@@ -10,11 +10,20 @@ CREATE VIEW v_quiz_basic AS
 
 /*quiz带统计信息的视图*/
 CREATE VIEW v_quiz AS
-	SELECT q.*,if(sum(s.result),sum(s.result),0) AS correct,count(s.id) AS count
-	FROM v_quiz_basic q LEFT JOIN t_quiz_submit s ON s.qid=q.id
-	WHERE q.status='PASS'
-	GROUP BY q.id
-	ORDER BY id ASC	
+	SELECT t.id,t.title,t.create_date,t.owner_id,u.name AS owner_name,t.category,
+	(
+		SELECT count(s.result) AS currect
+		FROM t_quiz_submit s
+		WHERE s.qid= t.id  AND (s.result = 'CORRECT' || (result='PROBABILITY' AND s.prob>80))
+	) AS currect,
+	(
+		SELECT count(s.id) AS count
+		FROM t_quiz_submit s
+		WHERE s.qid=t.id 
+	) AS count
+	FROM t_quiz t LEFT JOIN t_user u ON t.owner_id=u.id
+	GROUP BY t.id
+	ORDER BY t.id ASC
 
 /*quiz状态视图*/
 CREATE VIEW v_quiz_status AS

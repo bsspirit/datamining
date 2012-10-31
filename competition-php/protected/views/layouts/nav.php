@@ -1,5 +1,5 @@
 <ul id="yw2">
-<li><a href="/quiz">Problems</a></li>
+<li><a href="/quiz">Quiz</a></li>
 <?php 
 if(Yii::app()->user->isGuest){//游客
 ?>	

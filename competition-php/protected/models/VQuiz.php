@@ -7,12 +7,11 @@
  * @property integer $id
  * @property string $title
  * @property string $create_date
- * @property string $end_date
  * @property integer $owner_id
  * @property string $owner_name
- * @property double $correct
- * @property string $count
  * @property integer $category
+ * @property string $currect
+ * @property string $count
  */
 class VQuiz extends CActiveRecord
 {
@@ -42,15 +41,14 @@ class VQuiz extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, owner_id', 'required'),
+			array('title, owner_id, category', 'required'),
 			array('id, owner_id, category', 'numerical', 'integerOnly'=>true),
-			array('correct', 'numerical'),
 			array('title, owner_name', 'length', 'max'=>16),
-			array('count', 'length', 'max'=>21),
-			array('create_date, end_date', 'safe'),
+			array('currect, count', 'length', 'max'=>21),
+			array('create_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, create_date, end_date, owner_id, owner_name, correct, count, category', 'safe', 'on'=>'search'),
+			array('id, title, create_date, owner_id, owner_name, category, currect, count', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -74,12 +72,11 @@ class VQuiz extends CActiveRecord
 			'id' => 'ID',
 			'title' => 'Title',
 			'create_date' => 'Create Date',
-			'end_date' => 'End Date',
 			'owner_id' => 'Owner',
 			'owner_name' => 'Owner Name',
-			'correct' => 'Correct',
-			'count' => 'Count',
 			'category' => 'Category',
+			'currect' => 'Currect',
+			'count' => 'Count',
 		);
 	}
 
@@ -97,12 +94,11 @@ class VQuiz extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('create_date',$this->create_date,true);
-		$criteria->compare('end_date',$this->end_date,true);
 		$criteria->compare('owner_id',$this->owner_id);
 		$criteria->compare('owner_name',$this->owner_name,true);
-		$criteria->compare('correct',$this->correct);
-		$criteria->compare('count',$this->count,true);
 		$criteria->compare('category',$this->category);
+		$criteria->compare('currect',$this->currect,true);
+		$criteria->compare('count',$this->count,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

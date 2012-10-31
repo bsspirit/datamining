@@ -1,8 +1,7 @@
 use competition;
-
 insert into t_user(id,name,password,email) values(1,'admin','0cc175b9c0f1b6a831c399e269772661','bsspirit@gmail.com'); /*admin*/
-insert into t_user(id,name,password,email) values(2,'owner','0cc175b9c0f1b6a831c399e269772661','123@gmail.com'); /*owner*/
-insert into t_user(id,name,password,email) values(3,'player1','0cc175b9c0f1b6a831c399e269772661','123@gmail.com'); /*player*/
+insert into t_user(id,name,password,email) values(2,'owner','0cc175b9c0f1b6a831c399e269772661','owner@gmail.com'); /*owner*/
+insert into t_user(id,name,password,email) values(3,'player1','0cc175b9c0f1b6a831c399e269772661','player1@gmail.com'); /*player*/
 
 insert into t_quiz(id,title,content,owner_id) values(1,'q1','问题1',2);
 insert into t_quiz_data(qid,type,data) values(1,0,'ylpylb,1rVeQX0d@xxx.xxx,1,1rVeQX0d,8,4,0,0.0,1,9,9,13\ndeojog,B4PLAQM0@xxx.xxx,1,B4PLAQM0,8,3,0,0.0,1,4,4,11\ndaxlybol,ertjpece@xxx.xxx,1,ertjpece,8,1,0,0.0,1,6,6,8\n');

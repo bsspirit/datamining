@@ -5,7 +5,7 @@
 <?php 
 
 
-function colorResult($result){
+function colorResult($result,$prob){
 	$color = 'red';
 	switch($result){
 		case 'COMPILE':
@@ -16,8 +16,13 @@ function colorResult($result){
 		case 'CORRECT':
 			$color = 'green';
 			break;
-		default:
-			$color = 'blue';
+		case 'PROBABILITY':
+			$result .='-'.$prob.'%';
+			if($prob>=80){
+				$color = 'blue';
+			}else{
+				$color = 'red';
+			}
 			break;
 	}
 	$html = '<span style="color:'.$color.'">'.$result.'</span>';
@@ -41,6 +46,11 @@ function colorStatus($status){
 	return $html;
 }
 
+function labelStatistic($qid){
+	$html = '<a href="?qid='.$qid.'">quiz</a>';
+	return $html;
+}
+
 
 $this->widget('zii.widgets.grid.CGridView', array(
 		'id'=>'quiz-grid',
@@ -56,17 +66,12 @@ $this->widget('zii.widgets.grid.CGridView', array(
 				array(
 						'name'=>'Result',
 						'type' => 'raw',
-						'value' => 'colorResult($data->result)',
+						'value' => 'colorResult($data->result,$data->prob)',
 				),
 				array(
 						'name'=>'Status',
 						'type' => 'raw',
 						'value' => 'colorStatus($data->status)',
-				),
-				array(
-						'name'=>'Source',
-						'type' => 'raw',
-						'value' => 'CHtml::link("view",Yii::app()->createUrl("quiz/source", array("id"=>$data->id)))'
 				),
 				array(
 						'name'=>'Category',
@@ -77,13 +82,18 @@ $this->widget('zii.widgets.grid.CGridView', array(
 			// 			'name'=>'Memory',
 			// 			'value'=>'',
 			// 		),
-				array(
-						'name'=>'Runtime',
-						'value'=>'',
-				),
+// 				array(
+// 						'name'=>'Runtime',
+// 						'value'=>'',
+// 				),
 				'code_length',
 				'player_name',
 				'create_date',
+				array(
+					'name'=>'Statistic',
+					'type' => 'raw',
+					'value' => 'labelStatistic($data->qid)',
+				),
 		),
 ));
 
