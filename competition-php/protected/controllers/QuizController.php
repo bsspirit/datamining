@@ -82,6 +82,9 @@ class QuizController extends Controller
 				'pagination'=>array(
 						'pageSize'=>50,
 				),
+				'sort'=>array(
+						'defaultOrder'=>'id DESC',
+				),
 		));
 		
 		$this->render('status',array(
@@ -107,6 +110,9 @@ class QuizController extends Controller
 				),
 				'pagination'=>array(
 						'pageSize'=>50,
+				),
+				'sort'=>array(
+						'defaultOrder'=>'id DESC',
 				),
 		));
 		
