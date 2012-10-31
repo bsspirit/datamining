@@ -41,7 +41,6 @@ class QuizController extends Controller
 	//所有人===============================================================
 	public function actionIndex(){
 		//查类别
-		
 		$condition='';
 		if(isset($_GET['category']))
 			$condition.= ' category=' . $_GET['category'];
@@ -70,6 +69,7 @@ class QuizController extends Controller
 	//登陆用户===============================================================
 	public function actionStatus(){
 		//查类别
+		$condition='';
 		if(isset($_GET['category']))
 			$condition.= ' category=' . $_GET['category'];
 		if(isset($_GET['qid']))
